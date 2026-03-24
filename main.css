@@ -1,0 +1,199 @@
+@import './node_modules/primeicons/primeicons.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  align-items: flex-start;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 0.5em;
+}
+
+.catalogo {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+.catalogo::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.catalogo::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 1fr;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+  }
+}
+
+.action {
+  text-align: right;
+  padding: 1em;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  padding-left: 1em;
+  padding-right: 1em;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+div.images {
+  display: flex;
+  height: 200px;
+}
+
+.img-main {
+  height: 200px !important;
+  margin-right: 0.5em;
+}
+
+.img-main img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-secondary {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.img-secondary img {
+  height: 50%;
+  width: 100%;
+}
+
+button.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table.cart {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.cart th,
+table.cart td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table.cart tfoot td {
+  font-weight: bold;
+  text-align: right;
+}
+
+.quantity-input {
+  width: 5em;
+  padding: 0.5em;
+  border: #ddd 0.5px solid;
+  border-radius: 6px;
+}
+
+.quantity-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 0.5em;
+  color: red;
+}
+
+#pay-form {
+  padding: 1em;
+  margin: auto auto;
+  width: 40%;
+  height: 60%;
+  border-radius: 6px;
+  border: none;
+  background-color: #fafafa;
+  align-items: center;
+}
+
+dialog header {
+  margin: 1em;
+  border-bottom: #ddd 0.5px solid;
+}
+
+dialog .dialog-content {
+  padding: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+}
+
+dialog footer {
+  width: 100%;
+  height: 4em;
+  text-align: center;
+  margin: auto 0;
+}
+
+dialog button {
+  padding: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+dialog button:hover {
+  background-color: #007bff;
+  color: white;
+}

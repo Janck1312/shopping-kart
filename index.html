@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./sweetalert2@11.js"></script>
+    <script src="./index.js"></script>
+    <title>Carrito de Compras</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="catalogo"></div>
+      <div class="carrito">
+        <table class="cart">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Subtotal</th>
+              <th>IVA</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">Total</td>
+              <td id="total-price" colspan="3">$0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="action">
+          <button class="payment" id="payment">
+            <i class="pi pi-wallet"> </i> Pagar
+          </button>
+        </div>
+      </div>
+    </div>
+    <dialog id="pay-form">
+      <header>
+        <h2>Preparando su pago</h2>
+      </header>
+      <div class="dialog-content">
+        <p>
+          Nota: Esta interfaz es solo ilustrativa y ayuda a "completar"el flujo
+          de compra del carrito No ingrese datos reales, ya que no se procesarán
+          ni almacenarán y alguien puede aprovechar para robarlos, cuida tu
+          integridad.
+        </p>
+        <p>Su pago se está procesando. Por favor, espere...</p>
+      </div>
+      <footer>
+        <button id="confirm-payment">Confirmar</button>
+        <button id="cancel-payment">Cancelar</button>
+      </footer>
+    </dialog>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        window.catalogo = new Catalogo();
+      });
+    </script>
+  </body>
+</html>
